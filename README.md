@@ -1,4 +1,4 @@
-# fs-helpers
+# filesystem-helpers
 
 ### This a beta release. ASAP I will add the documnetations.
 
@@ -6,9 +6,9 @@
 
 ```bash
 # npm
-$ npm install fs-helpers
+$ npm install filesystem-helpers
 # yarn
-$ yarn add fs-helpers
+$ yarn add filesystem-helpers
 ```
 
 ## `Usage`
