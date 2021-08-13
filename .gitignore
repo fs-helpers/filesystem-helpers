@@ -5,7 +5,7 @@
 Thumbs.db
 tmp
 temp
-
+any-folder
 
 #     Node.js     #
 ###################
@@ -22,4 +22,5 @@ coverage
 #      Build      #
 ###################
 dist
+build
 lib
