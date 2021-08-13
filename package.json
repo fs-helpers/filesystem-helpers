@@ -1,6 +1,6 @@
 {
-  "name": "module-ts-template",
-  "version": "0.0.0",
+  "name": "fs-helpers",
+  "version": "0.1.0-beta.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mongodb-helpers/module-ts-template.git"
+    "url": "git+https://github.com/fs-helpers/fs-helpers.git"
   },
   "keywords": [],
   "license": "MIT",
@@ -32,13 +32,28 @@
     "email": "imed-jaberi@outlook.com",
     "url": "https://www.3imed-jaberi.com"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "destroy": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.4.13",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "mocha": "^9.0.3",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
   "engines": {
-    "node": ">= 14"
+    "node": ">= 14.14.0"
   },
   "bugs": {
-    "url": "https://github.com/mongodb-helpers/module-ts-template/issues"
+    "url": "https://github.com/fs-helpers/fs-helpers/issues"
   },
-  "homepage": "https://github.com/mongodb-helpers/module-ts-template#readme"
+  "homepage": "https://github.com/fs-helpers/fs-helpers#readme"
 }
