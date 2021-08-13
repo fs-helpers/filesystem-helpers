@@ -43,7 +43,7 @@ export async function cp(src: string|ReadStream, dest: string) {
     read && destroy(read)
     write && destroy(write)
     // always clean up temp files
-    await fs.promises.unlink(tmp).catch(() => {})
+    await fs.promises.unlink(tmp).catch(() => {}) // eslint-disable-line @typescript-eslint/no-empty-function
     throw error
   }
 }
