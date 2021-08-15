@@ -29,7 +29,6 @@ describe('mkdir module', () => {
   it('should use options.mode with async', async () => {
     await mkdirp(folderPath, { mode: 0o600 })
     const stats = fs.statSync(folderPath)
-    console.log(stats.mode);
     
     assert.strictEqual(stats.mode & 0o600, 0o600)
   })

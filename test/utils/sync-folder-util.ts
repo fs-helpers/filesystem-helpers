@@ -4,7 +4,6 @@ import { rm } from '../../src/rm'
 
 export async function syncFolder () {
   const folderPath = path.resolve('any-folder')
-  console.log('////////', folderPath);
   
   try {
     await rm(folderPath)
