@@ -1,11 +1,8 @@
 import fs from 'fs'
-import { promisify } from 'utils'
-
-const statAsync = promisify(fs.stat)
 
 export async function isDir(filepath: string) {
   try {
-    const stats = await statAsync(filepath)
+    const stats = await fs.promises.stat(filepath)
     return stats.isDirectory()
   } catch {
     return false
