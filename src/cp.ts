@@ -30,6 +30,7 @@ export async function cp(src: string|ReadStream, dest: string) {
         read.removeListener('error', onfinish)
         write.removeListener('error', onfinish)
         write.removeListener('close', onfinish)
+        /* istanbul ignore if */
         if (err instanceof Error) reject(err)
         else resolve(dest)
       }
