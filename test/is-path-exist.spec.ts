@@ -8,7 +8,7 @@ describe('is-path-exist', () => {
     assert(!(await isPathExist('failed')))
   })
 
-  it('sync', async () => {
+  it('sync', () => {
     assert(isPathExistSync('LICENSE'))
     assert(!isPathExistSync('failed'))
   })

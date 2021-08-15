@@ -8,7 +8,7 @@ describe('is-dir', () => {
     assert(!(await isDir('failed')))
   })
 
-  it('sync', async () => {
+  it('sync', () => {
     assert(isDirSync('test'))
     assert(!isDirSync('failed'))
   })
