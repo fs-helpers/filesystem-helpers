@@ -4,7 +4,7 @@ import assert from 'assert'
 import { mkdirp, mkdirpSync } from '../src/mkdir'
 import { syncFolder } from './utils/sync-folder-util'
 
-let folderPath 
+let folderPath: string 
 
 ;(async () => {
   folderPath = await syncFolder()
@@ -15,15 +15,26 @@ describe('mkdir module', () => {
     fs.rmdirSync(folderPath, { recursive: true })
   })
 
-  it('should work with async', async () => {    
+  it('async', async () => {    
     await mkdirp(folderPath)
     fs.statSync(folderPath)
     return
   })
 
-  it('should work with sync', () => {
+  it('sync', () => {
     mkdirpSync(folderPath)
     fs.statSync(folderPath)
+  })
+
+  it('async with multipaths', async () => {    
+    await mkdirp([folderPath, folderPath + '2'])
+    fs.statSync(folderPath + '2')
+    return
+  })
+
+  it('sync with multipaths', () => {
+    mkdirpSync([folderPath, folderPath + '2'])
+    fs.statSync(folderPath + '2')
   })
 
   it('should use options.mode with async', async () => {
