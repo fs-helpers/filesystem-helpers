@@ -34,7 +34,8 @@
   },
   "dependencies": {
     "destroy": "^1.0.4",
-    "ms": "^2.1.3"
+    "ms": "^2.1.3",
+    "rxjs": "^7.3.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.21",

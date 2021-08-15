@@ -1,13 +1,25 @@
 import * as fs from 'fs'
-import { bindNodeCallback } from 'rxjs'
+import { bindNodeCallback, from } from 'rxjs'
 
-const fsObservables = {}
+function toObservables(fileSystem, converter) {
+  const fsObservables = {}
 
-for (const key in fs) {
-  const element = fs[key]
-  if (typeof element === 'function') {
-    fsObservables[key] = bindNodeCallback(element)
+  for (const key in fileSystem) {
+    const element = fileSystem[key]
+    if (typeof element === 'function') {
+      fsObservables[key] = converter(element)
+    }
   }
+
+  return fsObservables
 }
 
-export default fsObservables
+export function fromFsCallbacks() {
+  return toObservables(fs, bindNodeCallback)
+}
+
+export function fromFsPromise() {
+  return toObservables(fs.promises, from)
+}
+
+export default fromFsCallbacks()
