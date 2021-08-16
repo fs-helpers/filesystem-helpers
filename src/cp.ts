@@ -51,23 +51,19 @@ export async function cp(src: string|ReadStream, dest: string) {
 
 
 export function cpSync(src: string|ReadStream, dest: string) {
-  let write: WriteStream
-  let read: ReadStream
-  let tmp
-
-  read = (src instanceof ReadStream) ? src : fs.createReadStream(src)
+  const read = (src instanceof ReadStream) ? src : fs.createReadStream(src)
 
   dest = path.resolve(dest)
   // where the file will be temporarily copied to
   // it'll be saved to the same folder, then renamed.
   // (to avoid race conditions ...)
-  tmp = `${dest}.${randomStr()}.tmp`
+  const tmp = `${dest}.${randomStr()}.tmp`
   
   mkdirpSync(path.dirname(dest))
 
   // processing
   read.on('error', onfinish)
-  write = fs.createWriteStream(tmp)
+  const write = fs.createWriteStream(tmp)
   write.on('error', onfinish)
   write.on('close', onfinish)
   read.pipe(write)
