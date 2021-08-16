@@ -1,7 +1,7 @@
 import fs from 'fs'
 import assert from 'assert'
 
-import { rm } from '../src/rm'
+import { rm, rmSync } from '../src/rm'
 import { syncFolder } from './utils/sync-folder-util'
 import { mkdirp } from '../src/mkdir';
 
@@ -13,8 +13,14 @@ let folderPath
 })()
 
 describe('rm', () => {
-  it('should work with async', async () => {
+  it('async', async () => {
     await rm(folderPath)
+    assert(!fs.existsSync(folderPath))
+  })
+
+  it('sync', async () => {
+    await mkdirp(folderPath)
+    rmSync(folderPath)
     assert(!fs.existsSync(folderPath))
   })
 })
