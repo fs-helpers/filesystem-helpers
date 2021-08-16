@@ -1,7 +1,7 @@
 import { ensureDir, ensureDirSync } from '../src/ensure-dir'
 import { randomStr } from '../src'
 
-describe('is-dir', () => {
+describe('ensure-dir', () => {
   it('async', async () => {
     await ensureDir('empty')
     await ensureDir(randomStr())
