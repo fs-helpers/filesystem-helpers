@@ -82,7 +82,7 @@ export class Cache {
       const value = await fs.readFile(filename)
       await this.#update(filename)
       return value
-    } catch (error) {} // eslint-disable-line no-empty
+    } catch {} // eslint-disable-line no-empty
   }
 
   /**
@@ -103,7 +103,7 @@ export class Cache {
       await fs.stat(filename)
       await this.#update(filename)
       return filename
-    } catch (error) {} // eslint-disable-line no-empty
+    } catch {} // eslint-disable-line no-empty
   }
 
   /**
