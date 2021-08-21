@@ -1,9 +1,8 @@
 import fs from 'fs'
 import assert from 'assert'
 
-import { rm, rmSync } from '../src/rm'
+import { rm, rmSync, mkdirp } from '../src'
 import { syncFolder } from './utils/sync-folder-util'
-import { mkdirp } from '../src/mkdir';
 
 let folderPath 
 

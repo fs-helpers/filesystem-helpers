@@ -1,8 +1,6 @@
 import assert from 'assert'
 
-import { mkdirpSync } from '../src/mkdir'
-import { rm } from '../src/rm'
-import { isEmptyDir, isEmptyDirSync } from '../src/is-empty-dir'
+import { mkdirpSync, rm, isEmptyDir, isEmptyDirSync } from '../src'
 
 describe('is-empty-dir', () => {
   it('async', async () => {

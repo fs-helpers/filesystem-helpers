@@ -2,9 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import assert from 'assert'
 
-import { mkdirp } from '../src/mkdir'
-import { cp, cpSync } from '../src/cp'
-import { rm } from '../src/rm'
+import { mkdirp, cp, cpSync, rm } from '../src'
 
 const folderPath = path.resolve('any-folder')
 

@@ -1,6 +1,6 @@
 import assert from 'assert'
 
-import { isDir, isDirSync } from '../src/is-dir'
+import { isDir, isDirSync } from '../src'
 
 describe('is-dir', () => {
   it('async', async () => {

@@ -1,5 +1,4 @@
-import { rm } from '../src/rm'
-import { ensureFile, ensureFileSync } from '../src/ensure-file'
+import { rm, ensureFile, ensureFileSync } from '../src'
 
 describe('ensure-file', () => {
 

@@ -1,6 +1,6 @@
 import path from 'path'
 
-import { rm } from '../../src/rm'
+import { rm } from '../../src'
 
 export async function syncFolder () {
   const folderPath = path.resolve('any-folder')

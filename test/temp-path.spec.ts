@@ -1,7 +1,7 @@
 import fs from 'fs'
 import assert from 'assert'
 
-import { randomTempPath, tempPath } from '../src/temp-path'
+import { randomTempPath, tempPath } from '../src'
 
 describe('temp-path module', () => {
   describe('randomTempPath', () => {

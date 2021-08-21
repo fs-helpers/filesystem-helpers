@@ -2,15 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import assert from 'assert'
 
-import { mkdirp } from '../src/mkdir'
-import { isEmptyDirSync } from '../src/is-empty-dir'
-import { mv, mvSync } from '../src/mv'
-import { rm } from '../src/rm'
-
-
+import { mkdirp, isEmptyDirSync, mv, mvSync, rm } from '../src'
 
 // mv work but here we have a bug with cpSync which affected the mvSync
-
 describe('mv module', function () {
   it('async', async function () {
     const folderPath = path.resolve('any-folder2')

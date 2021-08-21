@@ -1,7 +1,7 @@
 import fs from 'fs'
 import assert from 'assert'
 
-import { mkdirp, mkdirpSync } from '../src/mkdir'
+import { mkdirp, mkdirpSync } from '../src'
 import { syncFolder } from './utils/sync-folder-util'
 
 let folderPath: string 

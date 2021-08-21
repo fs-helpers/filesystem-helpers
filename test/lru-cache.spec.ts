@@ -1,7 +1,7 @@
 import fs from 'fs'
 import assert from 'assert'
  
-import { Cache } from '../src/lru-cache'
+import { Cache } from '../src'
 
 describe('lru-cache', () => {
   const cache = new Cache({ interval: 10 })

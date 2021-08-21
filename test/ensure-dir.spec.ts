@@ -1,5 +1,4 @@
-import { ensureDir, ensureDirSync } from '../src/ensure-dir'
-import { randomStr } from '../src'
+import { ensureDir, ensureDirSync, randomStr } from '../src'
 
 describe('ensure-dir', () => {
   it('async', async () => {

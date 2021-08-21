@@ -1,6 +1,6 @@
 import assert from 'assert'
 
-import { isPathExist, isPathExistSync } from '../src/is-path-exist'
+import { isPathExist, isPathExistSync } from '../src'
 
 describe('is-path-exist', () => {
   it('async', async () => {
